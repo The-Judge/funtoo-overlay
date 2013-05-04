@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layman>
+  <overlay contact="https://bitbucket.org/Judge82/funtoo-overlay" name="judge-funtoo-overlay" src="https://bitbucket.org/Judge82/funtoo-overlay" status="unofficial" type="git">
+    <link>https://bitbucket.org/Judge82/funtoo-overlay</link>
+    <description>Judge's Funtoo Linux Overlay</description>
+  </overlay>
+</layman>
+
