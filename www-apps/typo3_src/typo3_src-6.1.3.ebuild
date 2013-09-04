@@ -16,8 +16,7 @@ IUSE="mysql"
 RDEPEND="=www-apps/typo3_dummy-${PV}
 	|| ( >=dev-lang/php-5.3[filter,gd,json,ssl,session,soap,xml,zlib,truetype,zlib,mysql] >=dev-lang/php-5.3[filter,gd,json,ssl,session,soap,xml,zlib,truetype,zlib,mysqli] )
 	|| ( media-gfx/graphicsmagick[zlib,truetype,tiff,png,jpeg] <=media-gfx/imagemagick-4.2.9[zlib,truetype,tiff,png,jpeg] )
-	dev-libs/libpcre
-	>=dev-db/mysql-5.0"
+	dev-libs/libpcre"
 
 need_php5_httpd
 
