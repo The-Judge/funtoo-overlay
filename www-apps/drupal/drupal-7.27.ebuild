@@ -1,28 +1,28 @@
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.25.ebuild,v 1.1 2013/04/06 10:02:02 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils webapp depend.php
+inherit webapp
 
 MY_PV=${PV:0:3}.0
 
-DESCRIPTION="Drupal is a free software package that allows you to easily organize, manage and publish your content, with an endless variety of customization."
+DESCRIPTION="PHP-based open-source platform and content management system"
 HOMEPAGE="http://drupal.org/"
-#SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
-SRC_URI="http://drupal.org/files/projects/${PN}-${PV}.tar.gz"
+SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE="+mysql postgres sqlite"
 
-RDEPEND="dev-lang/php[gd,pdo,xml]
-	|| ( dev-php/pecl-apc dev-php/xcache )
+RDEPEND="virtual/httpd-php
+	dev-lang/php[gd,pdo,postgres?,xml]
 	dev-php/pecl-uploadprogress
 	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
-	postgres? ( dev-lang/php[postgres] )
-	sqlite? ( dev-lang/php[sqlite3] )"
+	sqlite? ( || ( dev-lang/php[sqlite] dev-lang/php[sqlite3] ) )"
 
-need_php5_httpd
+need_httpd_cgi
 
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
