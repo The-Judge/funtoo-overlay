@@ -13,7 +13,7 @@ HOMEPAGE="http://drupal.org/"
 SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE="+mysql postgres sqlite"
 
 RDEPEND="virtual/httpd-php
